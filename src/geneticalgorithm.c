@@ -9,9 +9,9 @@
 //#define PRINTCVS
 #define PRINTCHESSBOARD
 
-#define QUEEN 8         // Num of Queen
+#define QUEEN 8         // Num of Queens
 #define POPULATION 100  // Initial population
-#define MUTATIONRATE 40 // Mutation rate 30%    
+#define MUTATIONRATE 30 // Mutation rate 30%    
 #define _SIZEOF_RESULT_  struct struct_dna
 
 #define Malloc(pointer,cast,size,qnt) if((pointer=(cast)malloc(sizeof(size)*qnt))==NULL) {printf("Memory error!");exit(1);}
@@ -20,8 +20,8 @@
 #define CHESS(text,v) printf(text); for(j=0;j<QUEEN;j++)printf(" %d",v->chess[j]);
 
 typedef struct struct_dna {
-    unsigned int chess[QUEEN]; // Placed queen encoding    
-    float fitness; //  fitness function ->  1/ (num of attack + 1)
+    unsigned int chess[QUEEN]; // Placed queens encoding    
+    float fitness; //  fitness function ->  1/ (num of attacks + 1)
 } *dna;
 
 dna population[POPULATION];       // Array of initial population
